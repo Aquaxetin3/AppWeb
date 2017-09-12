@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Restaurante Sir Darvo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+  <ion-grid>
+    <ion-row>
+
+  <ion-card col-md-3 >
+    <button (click)="goToItems()">
+    <img src="https://www.rd.com/wp-content/uploads/sites/2/2017/04/01-Skinny-Summer-Cocktails-That-Wont-Bust-Your-Diet-1024x683.jpg"/>
+    <div class="card-title">Cocktails</div>
+    <div class="card-subtitle">41 Items</div>
+    </button>
+  </ion-card>
+
+  <ion-card col-md-3>
+      <button (click)="goToItems()">
+
+      <img src="http://www.curiosidario.es/wp-content/uploads/2014/12/tapas-y-aperitivos.jpg"/>
+      <div class="card-title">Aperitivos</div>
+      <div class="card-subtitle">64 Items</div>
+      </button>
+  </ion-card>
+
+  <ion-card col-md-3>
+    <button (click)="goToItems()">
+    <img src="http://arcdn.ar-cdn.com/hubcarousel/xlarge/video_caprese_salad_diets.jpg"/>
+    <div class="card-title">Platos de entrada</div>
+    <div class="card-subtitle">72 Items</div>
+    </button>
+  </ion-card>
+
+  <ion-card col-md-3>
+    <button (click)="goToItems()">
+    <img src="http://cocinarte.co/wp-content/uploads/2017/05/saludable-596x384.jpg"/>
+    <div class="card-title">Platos Fuertes</div>
+    <div class="card-subtitle">28 Items</div>
+    </button>
+  </ion-card>
+  </ion-row>
+  </ion-grid>
+
+</ion-content>
