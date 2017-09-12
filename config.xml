@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.mussky.ionic-v2-firebase" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Ionic v2 Firebase</name>
+<widget id="com.upoli.sirdarvo" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Restaurante Sir Darvo</name>
   <description>
-        Ionic v2 Firebase Auth and DB Connection Demo
+        Restaurante Sir Darvo
   </description>
-  <author email="musskygames@gmail.com" href="https://mussky.com/">
-      Mussky
-  </author>
+
   <content src="index.html"/>
   <access origin="*"/>
   <allow-intent href="http://*/*"/>

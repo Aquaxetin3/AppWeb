@@ -5,6 +5,8 @@ import { NavParams } from 'ionic-angular';
 import { EnterDataPage } from '../enter-data/enter-data';
 import { ShowDataPage } from '../show-data/show-data';
 import { MapPage } from '../map/map';
+import { MenuPage } from '../menu/menu';
+
 
 
 @Component({
@@ -13,7 +15,7 @@ import { MapPage } from '../map/map';
 export class TabsPage {
   // set the root pages for each tab
   tab1Root: any = EnterDataPage;
-  tab2Root: any = ShowDataPage;
+  tab2Root: any = MenuPage;
   tab3Root: any = MapPage;
   mySelectedIndex: number;
 

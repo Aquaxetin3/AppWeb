@@ -11,6 +11,8 @@ import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
+import { MenuPage } from '../pages/menu/menu';
+
 
 import { MapData } from '../providers/map-data';
 import { UserData } from '../providers/user-data';
@@ -36,9 +38,9 @@ export class Ionic_2_Firebase {
   // the left menu only works after login
   // the login page disables the left menu
   appPages: PageInterface[] = [
-    { title: 'Enter Data', component: TabsPage, tabComponent: EnterDataPage, icon: 'create' },
-    { title: 'Show Data', component: TabsPage, tabComponent: ShowDataPage, index: 1, icon: 'clipboard' },
-    { title: 'Map', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'map' }
+    { title: 'Admin', component: TabsPage, tabComponent: EnterDataPage, icon: 'create' },
+    { title: 'Menu', component: TabsPage, tabComponent: MenuPage, index: 1, icon: 'clipboard' },
+    { title: 'Location', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'map' }
   ];
   loggedInPages: PageInterface[] = [
     { title: 'Account', component: AccountPage, icon: 'person' },

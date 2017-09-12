@@ -14,6 +14,8 @@ import { MapPage } from '../pages/map/map';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DataDetailPage } from '../pages/data-detail/data-detail';
+import { MenuPage } from '../pages/menu/menu';
+
 
 import {  MapData } from '../providers/map-data';
 import { UserData } from '../providers/user-data';
@@ -45,7 +47,8 @@ export const myFirebaseAuthConfig = {
     DataPopoverPage,
     SignupPage,
     TabsPage,
-    DataDetailPage
+    DataDetailPage,
+    MenuPage
   ],
   imports: [
     IonicModule.forRoot(Ionic_2_Firebase),
@@ -63,7 +66,8 @@ export const myFirebaseAuthConfig = {
     DataPopoverPage,
     SignupPage,
     TabsPage,
-    DataDetailPage
+    DataDetailPage,
+    MenuPage
   ],
   providers: [MapData, UserData]
 })
