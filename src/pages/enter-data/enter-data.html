@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Enter Data</ion-title>
+    <ion-title>Add new Menu item</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -13,12 +13,17 @@
   <form #dataForm="ngForm" novalidate>
     <ion-list>
       <ion-item>
-        <ion-input placeholder="Data Name" [(ngModel)]="data.name" name="dataName" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"
+        <ion-input placeholder="Nombre del Plato" [(ngModel)]="data.name" name="dataName" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"
+          required>
+        </ion-input>
+      </ion-item>
+        <ion-item>
+        <ion-input placeholder="Precio" [(ngModel)]="data.price" name="dataText" type="number" #email="ngModel" spellcheck="false" autocapitalize="off"
           required>
         </ion-input>
       </ion-item>
       <ion-item>
-        <ion-textarea rows="6" placeholder="Data Text" [(ngModel)]="data.text" name="dataText" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"
+        <ion-textarea rows="6" placeholder="Descripcion" [(ngModel)]="data.text" name="dataText" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"
           required>
         </ion-textarea>
       </ion-item>
@@ -29,7 +34,7 @@
 
     <ion-row responsive-sm>
       <ion-col>
-        <button ion-button (click)="saveData(dataForm)" type="submit" block>Save Data</button>
+        <button ion-button (click)="saveData(dataForm)" type="submit" block>Agregar item al menu</button>
       </ion-col>
     </ion-row>
   </form>

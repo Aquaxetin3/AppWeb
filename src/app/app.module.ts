@@ -22,12 +22,13 @@ import { UserData } from '../providers/user-data';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 export const myFirebaseConfig = {
-     apiKey: "AIzaSyBan7VaLzMJ6aoN3kMjN_58Jr5KCdPt54k",
-    authDomain: "photoapp-1ca9a.firebaseapp.com",
-    databaseURL: "https://photoapp-1ca9a.firebaseio.com",
-    projectId: "photoapp-1ca9a",
-    storageBucket: "photoapp-1ca9a.appspot.com",
-    messagingSenderId: "880869713676"
+    apiKey: "AIzaSyBkysmlHPLGO8qZfZRclDbDjiD8vSToCek",
+    authDomain: "appweb-11f1a.firebaseapp.com",
+    databaseURL: "https://appweb-11f1a.firebaseio.com",
+    projectId: "appweb-11f1a",
+    storageBucket: "appweb-11f1a.appspot.com",
+    messagingSenderId: "929374883925"
+
 };
 
 
