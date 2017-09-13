@@ -14,8 +14,10 @@
   <ion-item-group>
   <ion-item-sliding *ngFor="let item of theItems | async" #slidingItem>
     <button ion-item (click)="openPage(item)">
-      {{item.name}}
-    </button>
+         <ion-icon name="ios-beer"></ion-icon>
+
+            {{item.name}}
+     </button>
 
     <ion-item-options>
       <button ion-button color="danger" (click)="delete(slidingItem, item)">

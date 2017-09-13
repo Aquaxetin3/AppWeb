@@ -1,20 +1,33 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Data</ion-title>
-    <!--<ion-buttons end>
-      <button ion-button icon-only (click)="more($event)">
-        <ion-icon name="more"></ion-icon>
+    <ion-title>{{data.name}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-right>
+        Agregar a la orden
+        <ion-icon name="ios-cart"></ion-icon>
       </button>
-    </ion-buttons>-->
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h1>{{data.name}}</h1>
+  <ion-row>
+      <ion-col col-md-6>
+  <ion-card>
+  <img src="http://www.nicaragua-magazine.com/wp-content/uploads/2011/04/Nicaraguan_Ceviche_With_Chips-with-shadow.jpg"/>
+  <ion-card-content>
+    <ion-card-title>
+      {{data.name}} - c$ {{data.price}}
+      </ion-card-title>
+    <p>
+          {{data.text}}
 
-  <h4>
-    {{data.text}}
-  </h4>
-  <h4>{{data.price}}</h4>
+    </p>
+  </ion-card-content>
+</ion-card>
+      </ion-col>
+  </ion-row>
+
+ 
 
 </ion-content>
