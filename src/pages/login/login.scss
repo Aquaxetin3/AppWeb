@@ -16,3 +16,43 @@ page-user {
     margin-bottom: 0;
   }
 }
+ .fondo {
+     background-image:url("http://img2.10bestmedia.com/Images/Photos/108803/p-greg-normans-australian-grill-005_54_990x660_201404220217.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width:100%;
+    height:100%;
+
+  }
+
+  .transparente{
+   background-color:transparent;
+   color:#fff;
+   text-align:center;
+   font-size:18px;
+  }
+.tamaño-letras-login{
+  font-size:21px;
+  color:#fff;
+}
+.buton{
+  background-color:#fff;
+    border: 1px solid #fff;
+    margin-top:60px;
+    opacity:0.30;
+
+}
+
+.color-login{
+  color:black;
+  font-size:18px;
+
+}
+.centrar-formulario{
+  margin-right:auto;
+  margin-left:auto;
+}
+.espacio-text{
+  margin-top:17px;
+}
