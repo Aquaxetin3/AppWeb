@@ -40,7 +40,7 @@ export class Ionic_2_Firebase {
   appPages: PageInterface[] = [
     { title: 'Admin', component: TabsPage, tabComponent: EnterDataPage, icon: 'create' },
     { title: 'Menu', component: TabsPage, tabComponent: MenuPage, index: 1, icon: 'clipboard' },
-    { title: 'Location', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'map' }
+    { title: 'Ordenes', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'ios-apps-outline' }
   ];
   loggedInPages: PageInterface[] = [
     { title: 'Account', component: AccountPage, icon: 'person' },

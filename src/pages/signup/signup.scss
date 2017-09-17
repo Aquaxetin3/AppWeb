@@ -37,18 +37,15 @@ page-user {
   color:#fff;
 }
 .buton{
-  background-color:#fff;
+  background: rgba(255, 255, 255, 0.3);
     border: 1px solid #fff;
     margin-top:60px;
-    opacity:0.30;
 
 }
-
-.color-login{
-  color:black;
-  font-size:18px;
-
+.buton:hover{
+  background: #fff !important;  
 }
+
 .centrar-formulario{
   margin-right:auto;
   margin-left:auto;

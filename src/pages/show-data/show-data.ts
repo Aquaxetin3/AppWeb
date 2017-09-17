@@ -35,7 +35,7 @@ export class ShowDataPage {
   getUid() {
     this.userData.getUid().then((uid) => {
       this.uid = uid;
-      this.theItems = this.af.database.list('/data' + '/' + this.uid);
+      this.theItems = this.af.database.list('/data');
     });
   }
 

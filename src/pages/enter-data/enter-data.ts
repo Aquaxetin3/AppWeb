@@ -35,7 +35,7 @@ export class EnterDataPage {
   getUid() {
     this.userData.getUid().then((uid) => {
       this.uid = uid;
-      this.theItems = this.af.database.list('/data' + '/' + this.uid);
+      this.theItems = this.af.database.list('/data');
     });
   }
 
@@ -43,7 +43,7 @@ export class EnterDataPage {
     this.submitted = true;
 	this.userData.getUid().then((uid) => {
       this.uid = uid;
-      this.theItems = this.af.database.list('/data' + '/' + this.uid);
+      this.theItems = this.af.database.list('/data');
 	  if (form.valid) {
       this.theItems.push({ name: this.data.name, text: this.data.text, price: this.data.price })
       .then((val) => {

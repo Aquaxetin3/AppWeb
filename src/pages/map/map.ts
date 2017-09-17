@@ -1,11 +1,10 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
-
-import { MapData } from '../../providers/map-data';
-
-import { Platform } from 'ionic-angular';
-
-
-declare var google: any;
+import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Storage } from '@ionic/storage';
+import { NavController, NavParams, MenuController, ItemSliding } from 'ionic-angular';
+import { AngularFire, FirebaseListObservable  } from 'angularfire2';
+import { UserData } from '../../providers/user-data';
+import { DataDetailPage } from '../data-detail/data-detail';
 
 @Component({
   selector: 'page-map',
@@ -13,41 +12,34 @@ declare var google: any;
 })
 export class MapPage {
 
-  @ViewChild('mapCanvas') mapElement: ElementRef;
-  constructor(public mapData: MapData, public platform: Platform) {
+  selectedItem: any;
+  data: {name?: string, text?: string} = {};
+  items: FirebaseListObservable<any[]>;
+  theItems: FirebaseListObservable<any[]>;
+  uid: string;
+  submitted = false;
+
+  constructor(public storage: Storage, public navCtrl: NavController,
+    public navParams: NavParams, public af: AngularFire, menuCtrl: MenuController,
+    public userData: UserData) {
+
+    this.items = af.database.list('/orders');
+    this.selectedItem = navParams.get('item');
+    //this.getUid();
   }
 
-  ionViewDidLoad() {
-
-      this.mapData.getMap().subscribe((mapData: any) => {
-        let mapEle = this.mapElement.nativeElement;
-
-        let map = new google.maps.Map(mapEle, {
-          center: mapData.find((d: any) => d.center),
-          zoom: 14
-        });
-
-        mapData.forEach((markerData: any) => {
-          let infoWindow = new google.maps.InfoWindow({
-            content: `<h5>${markerData.name}</h5>`
-          });
-
-          let marker = new google.maps.Marker({
-            position: markerData,
-            map: map,
-            title: markerData.name
-          });
-
-          marker.addListener('click', () => {
-            infoWindow.open(map, marker);
-          });
-        });
-
-        google.maps.event.addListenerOnce(map, 'idle', () => {
-          mapEle.classList.add('show-map');
-        });
-
-      });
-
+  ngAfterViewInit() {
+    this.getUid();
   }
+
+  getUid() {
+    this.userData.getUid().then((uid) => {
+      this.uid = uid;
+      this.theItems = this.af.database.list('/orders');
+    });
+  }
+
+  
 }
+
+

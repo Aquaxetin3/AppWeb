@@ -2,7 +2,7 @@
   <ion-navbar>
     <ion-title>{{data.name}}</ion-title>
     <ion-buttons end>
-      <button ion-button icon-right>
+      <button ion-button icon-right (click)="saveData()">
         Agregar a la orden
         <ion-icon name="ios-cart"></ion-icon>
       </button>
@@ -17,7 +17,7 @@
   <img src="http://www.nicaragua-magazine.com/wp-content/uploads/2011/04/Nicaraguan_Ceviche_With_Chips-with-shadow.jpg"/>
   <ion-card-content>
     <ion-card-title>
-      {{data.name}} - c$ {{data.price}}
+      {{data.name}} - C$ {{data.price}}
       </ion-card-title>
     <p>
           {{data.text}}
@@ -27,7 +27,5 @@
 </ion-card>
       </ion-col>
   </ion-row>
-
  
-
 </ion-content>
