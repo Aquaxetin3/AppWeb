@@ -68,6 +68,13 @@ export class MapPage {
 
     }
 
+    update(slidingItem: ItemSliding, item: any) {
+      this.theItems.remove(item.$key).then(() => {
+        console.log('Deleted Item with name: ' + item.name + ', key: ' + item.$key);
+        slidingItem.close();
+      });
+  }
+
   
 }
 
