@@ -8,6 +8,7 @@
 </ion-header>
 
 
+
 <ion-content padding >
   <ion-grid *ngIf="admin">
 
@@ -18,6 +19,7 @@
   <ion-item-group>
   <ion-item-sliding *ngFor="let item of theItems | async" #slidingItem>
     <button ion-item>
+
            {{returnTime(item.fecha)}} - {{item.name}} - C$ {{item.price}} - {{item.client}} - {{item.mesa}} - {{item.status}}
      </button>
 
@@ -30,12 +32,9 @@
   </ion-item-sliding>
 </ion-item-group>
 </ion-list>
+
 </ion-grid>
-<!--<ul>
-  <li class="text" *ngFor="let item of theItems | async">
-    {{item.name}}
-  </li>
-</ul>-->
+
 <ion-grid>
     <h1>{{clientsMessage}}</h1>
   </ion-grid>

@@ -3,3 +3,32 @@ page-account img {
   max-width: 140px;
   border-radius: 50%;
 }
+
+.centrar{
+text-align:center;
+
+}
+.fondo-button-cuenta{
+   background-color:transparent;
+   color:#fff;
+   text-align:center;
+   font-size:18px;
+   
+}
+
+.fondo-cuenta{
+	background-image:url("https://subwaymexico.com.mx/muywow/images/FondoWow.png");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width:100%;
+    height:100%;
+}
+.email-center{
+	color:#fff;
+	text-align:center;
+   font-size:18px;
+   
+}
+
+

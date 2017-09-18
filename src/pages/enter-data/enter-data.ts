@@ -18,6 +18,7 @@ export class EnterDataPage {
   uid: string;
   submitted = false;
   message: any;
+
   admin: boolean = false;
   clientsMessage:string;
 
@@ -32,6 +33,7 @@ export class EnterDataPage {
 
   ngAfterViewInit() {
     this.getUid();
+
     console.log(this.admin);
   }
 
