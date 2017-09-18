@@ -39,6 +39,27 @@ export class MapPage {
     });
   }
 
+   returnTime(previousTime:number){
+      let timeNeeded:number = Date.now() - previousTime;
+      let inMinutes:number = (timeNeeded/1000) / 60;
+      if (inMinutes < 20) {
+        return "Hace " + Math.floor(inMinutes) + " minutos";
+      } else if (inMinutes < 40) {
+        return "hace 30 minutos";
+      } else if (inMinutes < 80) {
+        return "Hace una hora";
+      } else if (inMinutes > 1380 && inMinutes < 2760) {
+        return "Hace un dia";
+      } else if (inMinutes < 1380) {
+        let hours:number = Math.floor(inMinutes/60);
+        return "Hace " + hours + " horas aproximadamente";
+      } else {
+        var date = new Date(previousTime);
+        return date.toDateString();
+      }
+
+    }
+
   
 }
 
