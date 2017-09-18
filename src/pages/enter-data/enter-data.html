@@ -8,15 +8,26 @@
 </ion-header>
 
 
+<<<<<<< HEAD
 <ion-content padding class="imagen-admin">
 
   <form #dataForm="ngForm" novalidate col-md-8 class="form-admin">
     <ion-list>
       <ion-item class="color-fondo">
+=======
+<ion-content padding >
+
+  <ion-grid *ngIf="admin">
+
+  <form #dataForm="ngForm" novalidate>
+    <ion-list>
+      <ion-item>
+>>>>>>> fcd8ea915013b640b07e2113eca8002d5ceaa683
         <ion-input placeholder="Nombre del Plato" [(ngModel)]="data.name" name="dataName" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"
           required>
         </ion-input>
       </ion-item>
+<<<<<<< HEAD
         <ion-item class="color-fondo">
         <ion-input placeholder="Precio" [(ngModel)]="data.price" name="dataText" type="number" #email="ngModel" spellcheck="false" autocapitalize="off"
           required >
@@ -24,6 +35,15 @@
       </ion-item>
       <ion-item class="color-fondo">
         <ion-textarea rows="6" placeholder="Descripción" [(ngModel)]="data.text" name="dataText" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"
+=======
+        <ion-item>
+        <ion-input placeholder="Precio" [(ngModel)]="data.price" name="dataText" type="number" #email="ngModel" spellcheck="false" autocapitalize="off"
+          required>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-textarea rows="6" placeholder="Descripcion" [(ngModel)]="data.text" name="dataText" type="text" #email="ngModel" spellcheck="false" autocapitalize="off"
+>>>>>>> fcd8ea915013b640b07e2113eca8002d5ceaa683
           required>
         </ion-textarea>
       </ion-item>
@@ -34,11 +54,24 @@
 
     <ion-row responsive-sm>
       <ion-col>
+<<<<<<< HEAD
         <button ion-button (click)="saveData(dataForm)" type="submit" block class="button"><span class="boton-agregar">Agregar item al menu</span></button>
+=======
+        <button ion-button (click)="saveData(dataForm)" type="submit" block>Agregar item al menu</button>
+>>>>>>> fcd8ea915013b640b07e2113eca8002d5ceaa683
       </ion-col>
     </ion-row>
   </form>
 <p ion-text color="danger" padding-left>{{message}}</p>
+<<<<<<< HEAD
+=======
+</ion-grid>
+
+   <ion-grid>
+    <h1>{{clientsMessage}}</h1>
+  </ion-grid>
+
+>>>>>>> fcd8ea915013b640b07e2113eca8002d5ceaa683
 
 <!--<ul>
   <li class="text" *ngFor="let item of theItems | async">
@@ -47,3 +80,8 @@
 </ul>-->
 
 </ion-content>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> fcd8ea915013b640b07e2113eca8002d5ceaa683

@@ -18,6 +18,11 @@ export class MapPage {
   theItems: FirebaseListObservable<any[]>;
   uid: string;
   submitted = false;
+<<<<<<< HEAD
+=======
+    admin: boolean = false;
+  clientsMessage:string;
+>>>>>>> fcd8ea915013b640b07e2113eca8002d5ceaa683
 
   constructor(public storage: Storage, public navCtrl: NavController,
     public navParams: NavParams, public af: AngularFire, menuCtrl: MenuController,
@@ -36,9 +41,42 @@ export class MapPage {
     this.userData.getUid().then((uid) => {
       this.uid = uid;
       this.theItems = this.af.database.list('/orders');
+<<<<<<< HEAD
     });
   }
 
+=======
+      if (uid === 's4VuKpSIgLbZYvoysq7fK2ghHTN2') {
+       this.admin = true;
+      }else{
+       this.clientsMessage = "Esta seccion solo es visible para los administradores de la App. Gracias por su compresion :)";
+
+      }
+    });
+  }
+
+   returnTime(previousTime:number){
+      let timeNeeded:number = Date.now() - previousTime;
+      let inMinutes:number = (timeNeeded/1000) / 60;
+      if (inMinutes < 20) {
+        return "Hace " + Math.floor(inMinutes) + " minutos";
+      } else if (inMinutes < 40) {
+        return "hace 30 minutos";
+      } else if (inMinutes < 80) {
+        return "Hace una hora";
+      } else if (inMinutes > 1380 && inMinutes < 2760) {
+        return "Hace un dia";
+      } else if (inMinutes < 1380) {
+        let hours:number = Math.floor(inMinutes/60);
+        return "Hace " + hours + " horas aproximadamente";
+      } else {
+        var date = new Date(previousTime);
+        return date.toDateString();
+      }
+
+    }
+
+>>>>>>> fcd8ea915013b640b07e2113eca8002d5ceaa683
   
 }
 

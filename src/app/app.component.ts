@@ -38,8 +38,13 @@ export class Ionic_2_Firebase {
   // the left menu only works after login
   // the login page disables the left menu
   appPages: PageInterface[] = [
+<<<<<<< HEAD
     { title: 'Admin', component: TabsPage, tabComponent: EnterDataPage, icon: 'create' },
     { title: 'Menu', component: TabsPage, tabComponent: MenuPage, index: 1, icon: 'clipboard' },
+=======
+    { title: 'Menu', component: TabsPage, tabComponent: MenuPage, icon: 'clipboard' },
+    { title: 'Admin', component: TabsPage, tabComponent: EnterDataPage, index: 1, icon: 'create' },
+>>>>>>> fcd8ea915013b640b07e2113eca8002d5ceaa683
     { title: 'Ordenes', component: TabsPage, tabComponent: MapPage, index: 2, icon: 'ios-apps-outline' }
   ];
   loggedInPages: PageInterface[] = [
