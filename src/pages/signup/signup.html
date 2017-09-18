@@ -1,0 +1,46 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Signup</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="login-page" class="fondo">
+
+	<div class="logo">
+		<img src="assets/img/logo.gif" >
+	</div>
+
+	<form #signupForm="ngForm" novalidate col-md-6 class="centrar-formulario">
+		<ion-list no-lines>
+			<ion-item class="transparente">
+				<ion-label stacked color="primary"><span class="tamaño-letras-login">Ingrese su Correo</span></ion-label>
+				<ion-input [(ngModel)]="signup.username" name="username" type="text" #username="ngModel" required class="espacio-text">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+				Username is required
+			</p>
+
+			<ion-item class="transparente">
+				<ion-label stacked color="primary"><span class="tamaño-letras-login">Ingrese Contraseña</span></ion-label>
+				<ion-input [(ngModel)]="signup.password" name="password" type="password" #password="ngModel" required class="espacio-text">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+				Password is required
+			</p>
+		</ion-list>
+
+		<div padding>
+			<button ion-button (click)="onSignup(signupForm)" type="submit" block class="buton"><span class="color-login">Crear</span></button>
+		</div>
+
+		<div>
+			<p ion-text color="danger" padding-left>{{message}}</p>
+		</div>
+	</form>
+
+</ion-content>

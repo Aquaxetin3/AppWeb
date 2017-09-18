@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ordenes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="">
+
+<ion-list #dataList>
+	<ion-item>
+		Fecha - Plato - Precio - Cliente - Nº de mesa - Status
+	</ion-item>
+  <ion-item-group>
+  <ion-item-sliding *ngFor="let item of theItems | async" #slidingItem>
+    <button ion-item>
+           {{item.fecha}} - {{item.name}} - C$ {{item.price}} - {{item.client}} - {{item.mesa}} - {{item.status}}
+     </button>
+
+    <ion-item-options>
+      <button ion-button color="primary">
+        Finalizar Orden
+      </button>
+    </ion-item-options>
+
+  </ion-item-sliding>
+</ion-item-group>
+</ion-list>
+<!--<ul>
+  <li class="text" *ngFor="let item of theItems | async">
+    {{item.name}}
+  </li>
+</ul>-->
+
+</ion-content>

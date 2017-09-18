@@ -1,0 +1,47 @@
+<ion-header >
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Login</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content style="" class="fondo">
+	<div class="logo">
+		<img src="assets/img/logo.gif" alt="Jicaro logo">
+	</div>
+
+	<form #loginForm="ngForm" novalidate col-md-6 class="centrar-formulario">
+		<ion-list no-lines>
+			<ion-item class="transparente">
+				<ion-label stacked color="primary"><span class="tamaño-letras-login">Nombre de Usuario</span></ion-label>
+				<ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
+					required class="espacio-text">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
+				Username is required
+			</p>
+
+			<ion-item class="transparente">
+				<ion-label stacked color="primary"><span class="tamaño-letras-login">Contraseña</span></ion-label>
+				<ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required class="espacio-text">
+				</ion-input>
+			</ion-item>
+			<p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+				Password is required
+			</p>
+		</ion-list>
+
+		<ion-row responsive-sm>
+			<ion-col >
+				<button ion-button (click)="onLogin(loginForm)" type="submit" block class="buton"><span class="color-login">Login</span></button>
+			</ion-col>
+		</ion-row>
+		<div>
+			<p ion-text color="danger" padding-left>{{message}}</p>
+		</div>
+	</form>
+
+</ion-content>

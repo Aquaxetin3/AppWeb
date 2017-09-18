@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{data.name}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-right (click)="saveData()">
+        Agregar a la orden
+        <ion-icon name="ios-cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="fondo-ordenes">
+  <ion-row>
+      <ion-col col-md-8 class="center-orden">
+  <ion-card >
+  <img src="http://www.nicaragua-magazine.com/wp-content/uploads/2011/04/Nicaraguan_Ceviche_With_Chips-with-shadow.jpg"/>
+  <ion-card-content>
+    <ion-card-title>
+      {{data.name}} - C$ {{data.price}}
+      </ion-card-title>
+    <p>
+          {{data.text}}
+
+    </p>
+  </ion-card-content>
+</ion-card>
+      </ion-col>
+  </ion-row>
+ 
+</ion-content>
