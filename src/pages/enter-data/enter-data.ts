@@ -18,6 +18,8 @@ export class EnterDataPage {
   uid: string;
   submitted = false;
   message: any;
+  admin: boolean = false;
+  clientsMessage:string;
 
   constructor(public storage: Storage, public navCtrl: NavController,
     public navParams: NavParams, public af: AngularFire, menuCtrl: MenuController,
@@ -30,12 +32,19 @@ export class EnterDataPage {
 
   ngAfterViewInit() {
     this.getUid();
+    console.log(this.admin);
   }
 
   getUid() {
     this.userData.getUid().then((uid) => {
       this.uid = uid;
       this.theItems = this.af.database.list('/data');
+      if (uid === 's4VuKpSIgLbZYvoysq7fK2ghHTN2') {
+       this.admin = true;
+      }else{
+       this.clientsMessage = "Esta seccion solo es visible para los administradores de la App. Gracias por su compresion :)";
+
+      }
     });
   }
 

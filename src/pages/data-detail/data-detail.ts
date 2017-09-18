@@ -42,7 +42,7 @@ export class DataDetailPage {
       this.theItems = this.af.database.list('/orders' );
       this.theItems.push({ name: this.data.name, price: this.data.price, client: this.uid, mesa: 1, status: 'pendiente', fecha: Date.now()})
       .then((val) => {
-        alert("Item agregado a la order");
+        alert("Item agregado a la orden. Tu orden estara lista en 30 minutps");
       })
       .catch((err) => {
         console.log(err);

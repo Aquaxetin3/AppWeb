@@ -18,6 +18,8 @@ export class MapPage {
   theItems: FirebaseListObservable<any[]>;
   uid: string;
   submitted = false;
+    admin: boolean = false;
+  clientsMessage:string;
 
   constructor(public storage: Storage, public navCtrl: NavController,
     public navParams: NavParams, public af: AngularFire, menuCtrl: MenuController,
@@ -36,6 +38,12 @@ export class MapPage {
     this.userData.getUid().then((uid) => {
       this.uid = uid;
       this.theItems = this.af.database.list('/orders');
+      if (uid === 's4VuKpSIgLbZYvoysq7fK2ghHTN2') {
+       this.admin = true;
+      }else{
+       this.clientsMessage = "Esta seccion solo es visible para los administradores de la App. Gracias por su compresion :)";
+
+      }
     });
   }
 
