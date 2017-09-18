@@ -8,7 +8,9 @@
 </ion-header>
 
 
-<ion-content padding *ngIf="admin">
+<ion-content padding >
+
+  <ion-grid *ngIf="admin">
 
   <form #dataForm="ngForm" novalidate>
     <ion-list>
@@ -39,6 +41,11 @@
     </ion-row>
   </form>
 <p ion-text color="danger" padding-left>{{message}}</p>
+</ion-grid>
+
+   <ion-grid>
+    <h1>{{clientsMessage}}</h1>
+  </ion-grid>
 
 
 <!--<ul>
@@ -49,6 +56,4 @@
 
 </ion-content>
 
-  <ion-content padding>
-    <h1>{{clientsMessage}}</h1>
-  </ion-content>
+

@@ -14,8 +14,8 @@ import { MenuPage } from '../menu/menu';
 })
 export class TabsPage {
   // set the root pages for each tab
-  tab1Root: any = EnterDataPage;
-  tab2Root: any = MenuPage;
+  tab1Root: any = MenuPage;
+  tab2Root: any = EnterDataPage;
   tab3Root: any = MapPage;
   mySelectedIndex: number;
 
